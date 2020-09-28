@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GameView" customModule="StarWandering" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-O5-5kH" userLabel="Score label">
+                    <rect key="frame" x="20" y="44" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mI6-O5-5kH" secondAttribute="height" multiplier="50:21" id="PQ7-aH-qeV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQy-NN-WOA" userLabel="Score value label">
+                    <rect key="frame" x="73" y="44" width="57" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="EQy-NN-WOA" secondAttribute="height" multiplier="19:7" id="zk0-dj-V7D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaQ-f4-lpD">
+                    <rect key="frame" x="350" y="44" width="42" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iaQ-f4-lpD" secondAttribute="height" multiplier="7:5" id="Fyb-bF-h3R"/>
+                    </constraints>
+                    <state key="normal" title="Pause">
+                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="onPauseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="5g1-jo-5BB"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HF-5g-k5H" userLabel="Space ship" customClass="SpaceShip" customModule="StarWandering" customModuleProvider="target">
+                    <rect key="frame" x="170" y="728" width="74" height="104"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-Hy-sHD" userLabel="Control pan">
+                    <rect key="frame" x="0.0" y="697" width="414" height="165"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0PH-Hy-sHD" secondAttribute="height" multiplier="138:55" id="3pS-oz-F66"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="TfQ-wB-2yn" appends="YES" id="gvP-B1-EQh"/>
+                        <outletCollection property="gestureRecognizers" destination="8GF-fh-MAU" appends="YES" id="dfQ-F2-yDc"/>
+                        <outletCollection property="gestureRecognizers" destination="y25-Aa-5YK" appends="YES" id="Vr3-ad-d0o"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="EQy-NN-WOA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0kX-VZ-28a"/>
+                <constraint firstItem="EQy-NN-WOA" firstAttribute="leading" secondItem="mI6-O5-5kH" secondAttribute="trailing" constant="3" id="CgQ-aP-v4P"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iaQ-f4-lpD" secondAttribute="trailing" constant="22" id="N3o-WH-Iib"/>
+                <constraint firstItem="0PH-Hy-sHD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NEQ-Gr-hEI"/>
+                <constraint firstItem="mI6-O5-5kH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NJm-VF-KAU"/>
+                <constraint firstItem="0PH-Hy-sHD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Vu9-lR-Jiy"/>
+                <constraint firstItem="0PH-Hy-sHD" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ZFK-iq-yqj"/>
+                <constraint firstItem="iaQ-f4-lpD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="k5p-Ur-dX4"/>
+                <constraint firstItem="mI6-O5-5kH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ocT-lD-E6q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="scoreLabel" destination="mI6-O5-5kH" id="B0t-EC-z7q"/>
+                <outlet property="scoreValueLabel" destination="EQy-NN-WOA" id="vOh-y2-SzB"/>
+                <outlet property="spaceShip" destination="7HF-5g-k5H" id="P4M-QS-Gcn"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
+        </view>
+        <swipeGestureRecognizer direction="right" id="TfQ-wB-2yn">
+            <connections>
+                <action selector="didSwipe:" destination="iN0-l3-epB" id="MjE-Pz-aLJ"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <tapGestureRecognizer id="8GF-fh-MAU">
+            <connections>
+                <action selector="didTap:" destination="iN0-l3-epB" id="9JK-Rg-7s9"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="y25-Aa-5YK">
+            <connections>
+                <action selector="didSwipe:" destination="iN0-l3-epB" id="BXV-mh-BeL"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+</document>

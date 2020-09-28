@@ -1,0 +1,16 @@
+[
+{
+    "name": "sentinel",
+    "gameImage": "sentinel",
+    "menuImage": "sentinel_menu",
+    "speed": 10,
+    "damage": 50
+},
+{
+    "name": "intruder",
+    "gameImage": "intruder",
+    "menuImage": "intruder_menu",
+    "speed": 20,
+    "damage": 100
+}
+]

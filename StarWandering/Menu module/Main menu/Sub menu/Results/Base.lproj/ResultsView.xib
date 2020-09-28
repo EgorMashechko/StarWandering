@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Durandal.otf">
+            <string>DurandalFlatCyrillicRemake-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ResultsView" customModule="StarWandering" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHe-cv-GrR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o3p-er-OiY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WY-C6-Khd">
+                    <rect key="frame" x="10" y="59" width="154" height="25"/>
+                    <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="13"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onDoneButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="bFR-eC-sNN"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tMa-9a-RVb">
+                    <rect key="frame" x="0.0" y="99" width="284" height="763"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yHe-cv-GrR" secondAttribute="bottom" id="7kk-qN-saO"/>
+                <constraint firstItem="tMa-9a-RVb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CRH-Di-BfV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yHe-cv-GrR" secondAttribute="trailing" id="Kd1-OE-Qo7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tMa-9a-RVb" secondAttribute="bottom" id="QeY-fw-CfP"/>
+                <constraint firstItem="2WY-C6-Khd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="dpN-TG-gGq"/>
+                <constraint firstItem="2WY-C6-Khd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="fkH-I5-qoN"/>
+                <constraint firstItem="yHe-cv-GrR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gbp-j7-weX"/>
+                <constraint firstItem="tMa-9a-RVb" firstAttribute="top" secondItem="2WY-C6-Khd" secondAttribute="bottom" constant="15" id="mPj-mi-u9T"/>
+                <constraint firstItem="yHe-cv-GrR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uYx-Fb-ZCM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2WY-C6-Khd" secondAttribute="trailing" constant="250" id="w7w-uv-aNY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tMa-9a-RVb" secondAttribute="trailing" constant="130" id="zbG-MZ-uXY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="resultsTableView" destination="tMa-9a-RVb" id="3nS-So-tgl"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="90"/>
+        </view>
+    </objects>
+</document>

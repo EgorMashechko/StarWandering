@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rv8-nf-jzz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Durandal.otf">
+            <string>DurandalFlatCyrillicRemake-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="ab7-XF-yvZ">
+            <objects>
+                <viewController id="Rv8-nf-jzz" customClass="MainMenuViewController" customModule="StarWandering" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="6f3-8l-yPb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="universe_menu" translatesAutoresizingMaskIntoConstraints="NO" id="Xqc-jf-Let" userLabel="Background ImView">
+                                <rect key="frame" x="0.0" y="0.0" width="1792" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-0E-4Xp" userLabel="Ship ImView">
+                                <rect key="frame" x="20" y="306.5" width="374" height="283"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jT9-0E-4Xp" secondAttribute="height" multiplier="374:283" id="y9H-pJ-yEf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-kO-brQ" userLabel="Start button">
+                                <rect key="frame" x="120" y="772.5" width="174" height="49.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UPF-kO-brQ" secondAttribute="height" multiplier="67:19" id="aev-wo-AAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="17"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onStartButton:" destination="Rv8-nf-jzz" eventType="touchUpInside" id="yDf-of-yI6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UPF-kO-brQ" firstAttribute="leading" secondItem="odJ-Te-f94" secondAttribute="leading" constant="120" id="1La-SZ-zie"/>
+                            <constraint firstItem="odJ-Te-f94" firstAttribute="trailing" secondItem="jT9-0E-4Xp" secondAttribute="trailing" constant="20" id="FH2-7r-lWG"/>
+                            <constraint firstItem="odJ-Te-f94" firstAttribute="bottom" secondItem="UPF-kO-brQ" secondAttribute="bottom" constant="40" id="adU-4a-Lad"/>
+                            <constraint firstItem="jT9-0E-4Xp" firstAttribute="leading" secondItem="odJ-Te-f94" secondAttribute="leading" constant="20" id="bgl-qC-Ox0"/>
+                            <constraint firstItem="odJ-Te-f94" firstAttribute="trailing" secondItem="UPF-kO-brQ" secondAttribute="trailing" constant="120" id="iZK-Fh-eye"/>
+                            <constraint firstItem="jT9-0E-4Xp" firstAttribute="centerY" secondItem="6f3-8l-yPb" secondAttribute="centerY" id="kQ5-4C-IzZ"/>
+                            <constraint firstItem="jT9-0E-4Xp" firstAttribute="centerX" secondItem="6f3-8l-yPb" secondAttribute="centerX" id="rZw-nR-0Zk"/>
+                            <constraint firstItem="UPF-kO-brQ" firstAttribute="centerX" secondItem="6f3-8l-yPb" secondAttribute="centerX" id="zp1-Fm-hZG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="odJ-Te-f94"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Xqc-jf-Let" id="DAa-Tf-T60"/>
+                        <outlet property="shipImageView" destination="jT9-0E-4Xp" id="Dk6-9Q-XZf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QGf-sY-hdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="universe_menu" width="480" height="213.5"/>
+    </resources>
+</document>

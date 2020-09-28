@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "---"; ObjectID = "EQy-NN-WOA"; */
+"EQy-NN-WOA.text" = "---";
+
+/* Class = "UIButton"; normalTitle = "Pause"; ObjectID = "iaQ-f4-lpD"; */
+"iaQ-f4-lpD.normalTitle" = "Пауза";
+
+/* Class = "UILabel"; text = "Score:"; ObjectID = "mI6-O5-5kH"; */
+"mI6-O5-5kH.text" = "Счет:";

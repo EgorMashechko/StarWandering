@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Durandal.otf">
+            <string>DurandalFlatCyrillicRemake-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InGameMenuView" customModule="StarWandering" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQD-VO-Os7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YTu-Uy-vKD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="N6g-AR-ObJ">
+                                <rect key="frame" x="40" y="393.5" width="334" height="109"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8N-Sa-JPY" userLabel="Continue button">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="27"/>
+                                        <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="15"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onContinueButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="dku-4t-IfD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfm-Kp-ZDV" userLabel="Menu button">
+                                        <rect key="frame" x="0.0" y="82" width="334" height="27"/>
+                                        <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="15"/>
+                                        <state key="normal" title="Main menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onMenuButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="dcf-AQ-7W7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="N6g-AR-ObJ" firstAttribute="leading" secondItem="YTu-Uy-vKD" secondAttribute="leading" constant="40" id="4G4-TE-eTm"/>
+                            <constraint firstItem="N6g-AR-ObJ" firstAttribute="centerX" secondItem="YTu-Uy-vKD" secondAttribute="centerX" id="FKX-R4-6l7"/>
+                            <constraint firstItem="N6g-AR-ObJ" firstAttribute="centerY" secondItem="YTu-Uy-vKD" secondAttribute="centerY" id="JM4-i8-oYg"/>
+                            <constraint firstAttribute="trailing" secondItem="N6g-AR-ObJ" secondAttribute="trailing" constant="40" id="dRp-A8-vVS"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xQD-VO-Os7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HyS-SB-dde"/>
+                <constraint firstItem="xQD-VO-Os7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IXp-j8-UNU"/>
+                <constraint firstAttribute="bottom" secondItem="xQD-VO-Os7" secondAttribute="bottom" id="OQL-1K-npM"/>
+                <constraint firstItem="xQD-VO-Os7" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QvU-Ud-COE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
+        </view>
+    </objects>
+</document>
