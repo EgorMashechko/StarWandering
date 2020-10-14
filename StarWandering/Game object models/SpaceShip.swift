@@ -9,6 +9,11 @@ protocol SpaceShipDelegate: AnyObject {
 
 class SpaceShip: GameObject {
     
+//MARK: PRoperties
+    private lazy var damageLevel: UInt? = {
+        guard let value = UserDefaults.standard.value(forKey: "ship_damage") as? UInt else {return nil}
+        return value
+    }()
     weak var delegate: SpaceShipDelegate?
 
 //MARK: Initialization
@@ -39,6 +44,7 @@ class SpaceShip: GameObject {
         let size = CGSize(width: self.bounds.width / 10, height: self.bounds.height / 10)
         let frame = CGRect(origin: .zero, size: size)
         let bullet = Bullet(frame: frame)
+        bullet.damageLevel = damageLevel
         bullet.image = UIImage(named: "bullet")
         delegate?.didShot(self, by: bullet)
     }

@@ -3,6 +3,9 @@ import UIKit
 
 class Bullet: GameObject {
     
+//MARK: Properties
+    var damageLevel: UInt?
+    
 //MARK: Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,5 +24,4 @@ class Bullet: GameObject {
         }
     }
     
-
 }

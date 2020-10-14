@@ -3,6 +3,8 @@ import UIKit
 
 class GameObject: UIImageView {
     
+//MARK: Properties
+    var healthPoints = 100
     var isCollisable = true
     
 //MARK: Initialization

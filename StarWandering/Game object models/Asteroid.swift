@@ -8,6 +8,7 @@ protocol AsteroidDelegate: AnyObject {
 
 class Asteroid: GameObject {
     
+//MARK: Properties
     weak var delegate: AsteroidDelegate?
 
 //MARK: Initialization
@@ -23,9 +24,13 @@ class Asteroid: GameObject {
     override func didCollided(with object: GameObject?) {
         if self.isCollisable {
             if object is Bullet {
-                animatedExplose {
-                    self.removeFromSuperview()
-                    self.delegate?.didAsteroidExplose(self)
+                if let damageLvl = (object as! Bullet).damageLevel {
+                    self.healthPoints -= Int(damageLvl)
+                    guard self.healthPoints <= 0 else {return}
+                    animatedExplose {
+                        self.removeFromSuperview()
+                        self.delegate?.didAsteroidExplose(self)
+                    }
                 }
             }
         }
