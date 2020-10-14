@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Damage"; ObjectID = "1H5-ce-mR1"; */
+"1H5-ce-mR1.text" = "урон:";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "5Cr-4l-6iM"; */
+"5Cr-4l-6iM.text" = "имя:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "f6x-JR-RVc"; */
+"f6x-JR-RVc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gjL-YQ-g2U"; */
+"gjL-YQ-g2U.text" = "Label";
+
+/* Class = "UILabel"; text = "Speed"; ObjectID = "ouL-u8-p0s"; */
+"ouL-u8-p0s.text" = "скорость:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "urd-gk-fUx"; */
+"urd-gk-fUx.text" = "Label";

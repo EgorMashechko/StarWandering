@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9gQ-X5-NQz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Durandal.otf">
+            <string>DurandalFlatCyrillicRemake-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sub Menu View Controller-->
+        <scene sceneID="VVT-pA-D6D">
+            <objects>
+                <viewController id="9gQ-X5-NQz" customClass="SubMenuViewController" customModule="StarWandering" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UqY-3B-CnM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psn-Ub-1wp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8uW-yx-MGj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wcq-wz-rwP">
+                                <rect key="frame" x="70" y="396" width="254" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-2a-zh0">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="27"/>
+                                        <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="15"/>
+                                        <state key="normal" title="Results">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onRecordsButton:" destination="9gQ-X5-NQz" eventType="touchUpInside" id="qZ5-q9-37O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ep1-zJ-hdh">
+                                        <rect key="frame" x="0.0" y="77" width="254" height="27"/>
+                                        <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="15"/>
+                                        <state key="normal" title="Change Ship">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onChangeShipButton:" destination="9gQ-X5-NQz" eventType="touchUpInside" id="Np3-Q8-fI6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nF-CE-wSl">
+                                <rect key="frame" x="10" y="59" width="30" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6eq-S0-IoY"/>
+                                    <constraint firstAttribute="width" secondItem="3nF-CE-wSl" secondAttribute="height" multiplier="23:15" id="a5e-Wk-71s"/>
+                                </constraints>
+                                <state key="normal" image="menu_btn"/>
+                                <connections>
+                                    <action selector="onMenuButton:" destination="9gQ-X5-NQz" eventType="touchUpInside" id="QMc-ly-Odt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ctl-8L-cHn" firstAttribute="trailing" secondItem="wcq-wz-rwP" secondAttribute="trailing" constant="90" id="1fG-eD-CDl"/>
+                            <constraint firstAttribute="trailing" secondItem="Psn-Ub-1wp" secondAttribute="trailing" id="4qS-Jm-NOt"/>
+                            <constraint firstItem="Psn-Ub-1wp" firstAttribute="top" secondItem="UqY-3B-CnM" secondAttribute="top" id="4tz-Ef-VsX"/>
+                            <constraint firstItem="3nF-CE-wSl" firstAttribute="top" secondItem="ctl-8L-cHn" secondAttribute="top" constant="15" id="6eB-z7-yRv"/>
+                            <constraint firstAttribute="bottom" secondItem="Psn-Ub-1wp" secondAttribute="bottom" id="QTy-Ex-PhB"/>
+                            <constraint firstItem="wcq-wz-rwP" firstAttribute="centerY" secondItem="UqY-3B-CnM" secondAttribute="centerY" id="Sab-K5-anB"/>
+                            <constraint firstItem="3nF-CE-wSl" firstAttribute="leading" secondItem="ctl-8L-cHn" secondAttribute="leading" constant="10" id="fCk-Pn-jhg"/>
+                            <constraint firstItem="Psn-Ub-1wp" firstAttribute="leading" secondItem="UqY-3B-CnM" secondAttribute="leading" id="hJs-Ku-RzA"/>
+                            <constraint firstItem="wcq-wz-rwP" firstAttribute="leading" secondItem="ctl-8L-cHn" secondAttribute="leading" constant="70" id="kyF-BD-1AW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ctl-8L-cHn"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="Psn-Ub-1wp" id="nei-9s-DwS"/>
+                        <outlet property="menuButton" destination="3nF-CE-wSl" id="0v2-hf-52D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zzi-0b-RsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu_btn" width="256" height="256"/>
+    </resources>
+</document>

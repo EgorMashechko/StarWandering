@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Durandal.otf">
+            <string>DurandalFlatCyrillicRemake-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EndGameView" customModule="StarWandering" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chd-El-3VV">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KQL-92-WtP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98y-gp-sSs">
+                    <rect key="frame" x="40" y="434.5" width="334" height="27"/>
+                    <fontDescription key="fontDescription" name="DurandalFlatCyrillicRemake-Medium" family="Durandal Flat Cyrillic Remake" pointSize="15"/>
+                    <state key="normal" title="Game Over">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="UEK-HG-ltr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="chd-El-3VV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jtl-jg-Zrg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="98y-gp-sSs" secondAttribute="trailing" constant="40" id="P7Q-5x-7KF"/>
+                <constraint firstItem="chd-El-3VV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VHI-OJ-JpI"/>
+                <constraint firstAttribute="bottom" secondItem="chd-El-3VV" secondAttribute="bottom" id="ldB-97-tqJ"/>
+                <constraint firstItem="98y-gp-sSs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="p8b-DF-G0G"/>
+                <constraint firstItem="98y-gp-sSs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="quy-Y5-WXg"/>
+                <constraint firstAttribute="trailing" secondItem="chd-El-3VV" secondAttribute="trailing" id="v3H-2p-AMU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="90"/>
+        </view>
+    </objects>
+</document>
